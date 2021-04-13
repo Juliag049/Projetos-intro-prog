@@ -1,0 +1,69 @@
+<!DOCTYPE html >
+<html  lang = " pt-br " >
+<head>
+  <meta  charset = " UTF-8 " >
+  <meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
+  <meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+  <link  rel = " stylesheet " href = " base.css " >
+  <title>ATIVIDADE4</title >
+</head>
+<body>
+  
+  <p> Informe seu nome e gênero e receba um cumprimento personalizado . </p >
+ 
+    <style>
+        body{
+            background-image: url(https://independente.com.br/wp-content/uploads/2017/08/cerebro-homem-mulher-0117-1400x800.jpg);
+            background-size: 100%;
+            text-align: center;}
+            p{font-size: xx-large;}
+
+    </style>
+  <form novalidate >
+    <input  id = " field1 " type = " text " placeholder = " Qual o seu nome? " >
+
+    <select name="" id="field2">
+        <option value="">Informe o seu gênero</option>
+        <option value="f">feminino</option>
+        <option value="m">masculino</option>
+    </select>
+    <button>click aqui</button>
+
+    </form>
+
+    <div></div>
+
+  <script> 
+  function onSubmit(event) {
+      event . preventDefalt() 
+  
+    let  name  =  (field1 . value)
+    let  genero  = (field2 . value)
+
+      field1 . className  =  ''
+      field2 . className  =  ''
+
+     if  ( !name )  {
+        resultado . innerHTML  =  '<p> me informe seu nome por favor!! </p>'
+        field1 . className  =  'negativo'
+        field1 . foco ( )
+        return
+      }
+
+      if  ( !genero )  {
+        resultado . innerHTML  =  '<p> por favor selecione o gnero proposto </p>'
+        field2 . className  =  'negativo'
+        field2 . foco ( )
+        return
+      }
+      if  ( genero  ===  'f' )  {
+        resultado . innerHTML  =  `<p> Bem-vinda $ {name} você é ua garota linda!! </p>`
+      }  
+      else {
+        resultado . innerHTML  =  `<p> Bem-vindo $ {name} é um prazer te conhecer garoto! </p>`
+      }
+    }
+    formulario . addEventListener ( 'submit' ,  onSubmit )
+  </script>
+</body>
+</html>

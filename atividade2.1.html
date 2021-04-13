@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE2.1</title>
+</head> 
+<hr>
+<h1>Porcentagem</h1>
+<hr>
+
+<style>
+    body{background-color: rgb(105, 0, 0);
+    text-align: center;
+    font-size: larger;}
+</style>
+
+<body>
+    <form>
+        <input type="number" placeholder="digite o primeiro numero">
+        <p>
+        <input type="number" placeholder="digite a porcentagem">
+        <p>
+        <button>Calcular</button>
+    </form>
+
+    <script>
+        function onSubmit(event) {
+        event . preventDefault ()
+
+        let n1 = parseFloat(inpu1 . value )
+        let n2 = parseFloat(input2 . value)
+        let r = parseFloat(n1) * parseFloat(n2)
+        let resultado = ( r / 100)
+
+        if(isNaN(n1)) {
+            result . innerHTML = "insira o primeiro valor, por favor"
+            return
+        }
+
+        if(isNaN(n2)) {
+            result . innerHTML = "insira a porcentagem, por favor"
+            return
+        }
+
+        result . innerHTML = `
+        <p> O resultado da operação é: <b> $ {resultado} </b> </p>
+        `
+        }
+        
+        formulario . addEventListener( "Submit" , onSubmit)
+    
+    </script>
+</body>
+</html>

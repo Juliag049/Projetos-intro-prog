@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>ATIVIDADE1.2</title>
+</head> <hr>
+<h1>RESULTADO</h1>
+<hr>
+<body>
+    <style>
+body{background-color: rgb(153, 9, 9);
+text-align: center;
+font-size: xx-large;
+}
+
+    </style>
+    <script>
+let a= prompt("digite o primeiro numero")
+let b= prompt("digite o segundo numero")
+let c= prompt("digite o terceiro numero")
+
+r=( b * b ) - 4 * a * c;
+if(r < 0){
+    document.write("Delta negativo, sendo assim, nao ha raizes reais." + '<br>')
+}
+if(r > 0){
+s1=(-b - Math.sqrt( r )) / (2 * a)
+s2=(-b + Math.sqrt( r )) / (2 * a)
+}
+
+document.write("Para x´= " + s1 + '<br>')
+document.write("Para x´´= " + s2 + '<br>')
+
+    </script>
+</body>
+</html>

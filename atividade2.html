@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE2</title>
+</head>
+<hr>
+<h1>Operações matemáticas</h1>
+<hr>
+<body>
+    <form >
+        <input type="number" placeholder="insira o primeiro numero"> 
+        <p>
+        <input type="number" placeholder="insira o segundo numero">
+        <p>
+    <button>calcular</button>
+    </form>
+
+ <div></div>
+    
+ <style>
+     body{background-color: rgb(64, 64, 219);
+     text-align: center;
+     font-size: large;}
+     form{border: 5px black;
+     }
+ </style>
+
+    <script>
+            function onSubmit(event) {
+        event . preventDefaut () 
+    
+    let n1= parseFloat(input1 . value)
+    let n2= parseFloat(input2 . value) 
+    let  soma = n1 = n2
+    let subtração = n1 - n2     
+    let multiplicação = n1 * n2
+    let divisão = n1 / n2
+    let sobra = n1 % n2
+
+    if(isNaN(n1)) {
+        result . innerHTML = "insira o primeiro numero, por favor"
+        return}
+
+    if(isNaN(n2)) {
+        result . innerHTML = "insira o segundo numero, por favor"
+    }
+
+    result . innerHTML = `
+    <ul>
+          <li> Soma: <b> $ { soma } </b>. </li>
+          <li> Subtração: <b> $ { subtração } </b>. </li>
+          <li> Multiplicação: <b> $ { multiplicação } </b>. </li>
+          <li> Divisão: <b> $ { divisão } </b>. </li>
+          <li> Resto: <b> $ { sobra } </b>. </li>
+        </ul>
+      `
+    }
+      formulário . addEventListener( "submit" , onSubmit)
+
+    </script>
+</body>
+</html>

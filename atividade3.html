@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE3t</title>
+</head>
+<h1></h1>
+<body>
+    <form novalidate action="select">
+        <select>
+            <option>COMO ESTA SEU DIA HOJE?</option>
+            <option value="sunny">ENSOLARADO</option>
+            <option value="rainy">CHUVOSO</option>
+            <option value="snowing">NEVANDO</option>
+            <option value="overcast">NUBLADO</option>
+        </select>
+    <button>VEJA AQUI A SUA SELEÇÃO</button>
+    </form>
+
+    <div></div>
+    <style>
+        body{background-image: url(https://revistazunai.com.br/wp-content/uploads/2019/06/4-estacoes-do-ano-no-brasil.jpg);
+            background-size: 100%;
+            text-align: center;}
+        form{font-size: xx-large;}
+    </style>
+
+    <script>
+        function onSubmit(event) {
+        event . preventDefalt()
+        
+
+        let choice = select . value
+        field . className = ''
+
+        if ( choice === "sunny") {
+            para.textContent = "O dia esta radiante!! podemos tomar um café da manhã ao ar livre, andar de bicicleta e até caminhar na praia. Que dia maravilhoso!!"
+        }
+        else if (choice === "rainy") {
+            para.textContent = "Hoje esta um pouco complicado para sair mas quem precisa ficar em outro lugar se nao no conforto de sua casa? uma pipoca, filme e compannhia é maravilhoso!!"
+        }
+        else if (choice === "snowing") {
+            para.textContent = "Nossa!! esta frio no dia de hoje mas nada que um chocolate quente nao resolva!! alguem quer brincar na neve??"
+        }
+        else if (choise === "overcast") {
+            para.textContent = "ler um livro e assistir bons filmes é uma recomendação ótima para hoje, jantar a luz de velas ou uma boa aquecida na lareira. ahhh"
+        }
+        else {
+            result.innerHTML = "<p>por favor, responda a seleção</p>"
+            field . className = "negativo"
+            field . focus ()
+        }
+
+        formulario . addEventListener( "submit", onSubmit) }
+
+    </script>
+</body>
+</html>
